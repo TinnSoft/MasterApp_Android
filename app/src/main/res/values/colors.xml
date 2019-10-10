@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#d4d2d2</color>
+    <color name="light_grey">#F7F7F7</color>
+    <!--<color name="colorAccent">#FF4081</color>-->
+    <color name="mainBackground">#3BC4A5</color>
+    <color name="golden">#e9c001</color>
+    <color name="grey">#848484</color>
+    <color name="grey_sup">#B5B5B5</color>
+    <color name="background_textcard">#53292930</color>
+    <color name="white">#fff</color>
+    <color name="black">#000</color>
+    <color name="green_background">#3BC4A5</color>
+    <color name="green_text">#5FCFB6</color>
+    <color name="pink">#ccc</color>
+    <color name="bluemaster">#5FCFB6</color>
+    <color name="cleargrey">#F4F2F2</color>
+    <color name="azulaguaclara">#A8E5D7</color>
+    <color name="orange">#ffb14b</color>
+</resources>

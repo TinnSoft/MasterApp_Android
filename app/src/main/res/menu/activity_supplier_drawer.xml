@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <item android:title="Servicios">
+        <menu>
+            <item
+                android:id="@+id/nav_orders_supplier"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Solicitudes" />
+            <!--<item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Mensajes" />-->
+        </menu>
+    </item>
+    <item android:title="Mi cuenta">
+        <menu>
+            <item
+                android:id="@+id/nav_profile"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Ajuste de cuenta" />
+        </menu>
+    </item>
+
+</menu>

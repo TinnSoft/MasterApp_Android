@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".Supplier.SupplierActivity"
+    tools:showIn="@layout/app_bar_supplier">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarProfile"
+        android:layout_width="match_parent"
+        android:layout_height="205dp"
+        android:fitsSystemWindows="true"
+        android:background="@color/grey_sup"
+        android:theme="@style/AppThemeHome.AppBarOverlay"
+        >
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="@color/grey_sup"
+            app:statusBarScrim="@color/grey_sup"
+            tools:ignore="UnusedAttribute"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/linearLayout12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="41dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/name_card"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Andres"
+                            android:textColor="@android:color/white"
+                            android:textSize="29dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/card_point"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" 4.7"
+                            android:textColor="@android:color/white"
+                            android:textSize="18dp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_description"
+                        android:layout_width="166dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="5dp"
+                        android:text="Soy una gran chef, me encanta\ngenerar nuevos conceptos y\ncompartirlos con las personas"
+                        android:textColor="@android:color/white"
+                        android:textSize="10dp" />
+
+                    <Button
+                        android:id="@+id/btn_edit"
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/border_button_grey"
+                        android:onClick="onClick"
+                        android:text="Editar"
+                        android:textAllCaps="false"
+                        android:textColor="@android:color/white"
+                        android:textSize="15dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="26dp"
+                    android:gravity="center"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.625"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Seguidores"
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/title_follow" />
+
+                        <TextView
+                            android:id="@+id/tv_follower"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="0"
+                            android:textColor="@android:color/white"
+                            android:textSize="19dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="22dp">
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="40dp"
+                            android:background="@color/white" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="22dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Seguiendo"
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/title_follow" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="0"
+                            android:textColor="@android:color/white"
+                            android:textSize="19dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="22dp">
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="40dp"
+                            android:background="@color/white" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="22dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Servicios"
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/title_follow" />
+
+                        <TextView
+                            android:id="@+id/tv_services"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="0"
+                            android:textColor="@android:color/white"
+                            android:textSize="19dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+
+                tools:ignore="UnusedAttribute"
+                >
+            </android.support.v7.widget.Toolbar>
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="29dp"
+                    android:layout_marginTop="17dp"
+                    android:orientation="horizontal">
+
+                    <ToggleButton
+                        android:id="@+id/btnInfo"
+                        android:layout_width="55dp"
+                        android:layout_height="@dimen/button_menu"
+                        android:layout_marginStart="25dp"
+                        android:background="@drawable/rounded_button_white"
+                        android:onClick="onClick"
+                        android:textAllCaps="false"
+                        android:textColor="@color/mainBackground"
+                        android:textOff="Info"
+                        android:textOn="Info"
+                        android:textSize="@dimen/textsize_menu_chef"
+                        android:stateListAnimator="@null"
+                        />
+
+                    <ToggleButton
+                        android:id="@+id/btnPhoto"
+                        android:layout_width="60dp"
+                        android:layout_height="@dimen/button_menu"
+                        android:layout_marginLeft="15dp"
+                        android:background="@drawable/rounded_button_white"
+                        android:onClick="onClick"
+                        android:textAllCaps="false"
+                        android:textColor="@color/mainBackground"
+                        android:textOff="Fotos"
+                        android:textOn="Fotos"
+                        android:textSize="@dimen/textsize_menu_chef"
+                        android:stateListAnimator="@null"
+                        />
+
+                    <ToggleButton
+                        android:id="@+id/btnComment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/button_menu"
+                        android:layout_marginLeft="15dp"
+                        android:background="@drawable/rounded_button_white"
+                        android:onClick="onClick"
+                        android:textAllCaps="false"
+                        android:textColor="@color/mainBackground"
+                        android:textOff="Comentarios"
+                        android:textOn="Comentarios"
+                        android:textSize="@dimen/textsize_menu_chef"
+                        android:stateListAnimator="@null"
+
+
+                        />
+
+                    <ToggleButton
+                        android:id="@+id/btnMenu"
+                        android:layout_width="50dp"
+                        android:layout_height="@dimen/button_menu"
+                        android:layout_marginLeft="15dp"
+                        android:background="@drawable/rounded_button_white"
+                        android:onClick="onClick"
+                        android:textAllCaps="false"
+                        android:textColor="@color/mainBackground"
+                        android:textOff="Menu"
+                        android:textOn="Menu"
+                        android:textSize="@dimen/textsize_menu_chef"
+                        android:stateListAnimator="@null"
+                        />
+
+
+                </LinearLayout>
+
+                <FrameLayout
+                    android:id="@+id/container_fragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp">
+
+                </FrameLayout>
+            </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/photo_profile"
+        android:layout_width="@dimen/dime_imagecircleprofile"
+        android:layout_height="@dimen/dime_imagecircleprofile"
+        android:layout_gravity="left|top"
+        android:layout_marginLeft="37dp"
+        android:layout_marginTop="14dp"
+        android:elevation="10dp"
+        android:src="@drawable/ic_profile"
+        app:civ_border_color="@android:color/white"
+        app:civ_border_width="5dp"
+        app:dependTargetY="-50dp"
+        app:dependType="y"
+        app:dependsOn="@+id/appBarProfile"
+        app:layout_behavior="com.zoonref.SimpleViewBehavior"
+        app:targetHeight="10dp"
+        app:targetWidth="10dp"
+        app:targetX="-140dp"
+        app:targetY="-140dp" />
+
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/usernametoolbar_profile"-->
+        <!--android:text="Bohemian Cusinssse"-->
+        <!--android:textSize="18sp"-->
+        <!--android:textStyle="bold"-->
+        <!--android:elevation="16dp"-->
+        <!--android:layout_marginLeft="72dp"-->
+        <!--android:layout_marginTop="-45dp"-->
+        <!--android:gravity="center_vertical"-->
+        <!--android:textColor="@android:color/white"-->
+        <!--app:layout_behavior="com.zoonref.SimpleViewBehavior"-->
+        <!--app:dependsOn="@+id/photo_profile"-->
+        <!--app:dependType="y"-->
+        <!--app:dependTargetY="-150dp"-->
+        <!--app:targetY="80dp"-->
+        <!--app:targetX="85dp"-->
+        <!--app:targetAlpha="1"-->
+        <!--tools:ignore="MissingPrefix" />-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_gravity="bottom"
+        android:gravity="center"
+        android:background="#6DFFFFFF"
+        >
+        <Button
+            android:id="@+id/add_product"
+            android:layout_width="138dp"
+            android:layout_height="23dp"
+            android:text="Agregar"
+            android:stateListAnimator="@null"
+            android:background="@drawable/rounded_button_white"
+            android:textColor="@color/green_background"
+            android:textSize="11dp"
+            android:textAllCaps="false"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"/>
+    </LinearLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>

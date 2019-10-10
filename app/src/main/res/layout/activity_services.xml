@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ServicesActivity"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    >
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:layout_collapseMode="pin"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Servicios"
+            android:layout_gravity="center"
+            android:textColor="@android:color/black"
+            android:fontFamily="@font/montserrat_regular"
+            android:id="@+id/toolbar_title" />
+
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="90dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="vertical"
+            >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:onClick="onClick"
+                    android:id="@+id/fecha_chef"
+                    >
+                    <ImageView
+                        android:id="@+id/img_icon"
+                        android:layout_width="21dp"
+                        android:layout_height="22dp"
+                        android:layout_marginStart="16dp"
+                        android:src="@drawable/ic_calendar"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_weight="0.9"
+                        android:layout_marginLeft="10dp"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.7"
+                            android:text="Fecha"
+                            android:textColor="@color/grey"
+                            android:textSize="12dp"
+                            android:textStyle="bold"
+                            android:gravity="center_vertical"
+                            />
+
+                        <TextView
+                            android:layout_weight="0.3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textColor="@color/grey"
+                            android:textSize="11dp"
+                            android:id="@+id/fecha_chef_text"
+                            android:gravity="center_vertical|right"/>
+                    </LinearLayout>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_chevron_right_green"
+                        />
+                </LinearLayout>
+            <View
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/grey"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+
+                    android:onClick="onClick"
+                    android:id="@+id/hour_chef"
+                    >
+                    <ImageView
+                        android:layout_width="21dp"
+                        android:layout_height="22dp"
+                        android:layout_marginStart="16dp"
+                        android:src="@drawable/ic_clock"
+                        />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_weight="0.9"
+                        android:layout_marginLeft="10dp"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.7"
+                            android:text="Hora"
+                            android:textColor="@color/grey"
+                            android:textSize="12dp"
+                            android:textStyle="bold"
+                            android:gravity="center_vertical"
+                            />
+
+                        <TextView
+                            android:layout_weight="0.3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textColor="@color/grey"
+                            android:textSize="11dp"
+                            android:id="@+id/hour_chef_text"
+                            android:gravity="center_vertical|right"/>
+                    </LinearLayout>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_chevron_right_green"
+                        />
+                </LinearLayout>
+
+            <View
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/grey"/>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:onClick="onClick"
+                    android:id="@+id/alimentary_restriction"
+                    >
+                    <ImageView
+
+                        android:layout_width="21dp"
+                        android:layout_height="22dp"
+                        android:layout_marginStart="16dp"
+                        android:src="@drawable/ic_restrictions"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_weight="0.9"
+                        android:layout_marginLeft="10dp"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.6"
+                            android:text="Comentarios"
+                            android:textColor="@color/grey"
+                            android:textSize="12dp"
+                            android:textStyle="bold"
+                            android:gravity="center_vertical"
+                            />
+
+                        <TextView
+                            android:layout_weight="0.4"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textColor="@color/grey"
+                            android:textSize="11dp"
+                            android:id="@+id/alimentary_restriction_text"
+                            android:gravity="center_vertical|right"/>
+                    </LinearLayout>
+
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_chevron_right_green"
+                        />
+                </LinearLayout>
+
+            <View
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/grey"/>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:onClick="onClick"
+                    android:id="@+id/address"
+                    >
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="21dp"
+                        android:layout_weight="0.1"
+                        android:layout_marginStart="16dp"
+                        android:src="@drawable/ic_point"
+                        />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_weight="0.9"
+                        android:layout_marginLeft="10dp"
+                        android:weightSum="1">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Dirección"
+                            android:textColor="@color/grey"
+                            android:textSize="12dp"
+                            android:textStyle="bold"
+                            android:gravity="center_vertical"
+                            android:layout_weight="0.7"
+                            />
+                        <TextView
+                            android:layout_weight="0.3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textColor="@color/grey"
+                            android:textSize="11dp"
+                            android:gravity="center_vertical|right"
+                            android:id="@+id/address_text"/>
+                    </LinearLayout>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+
+                        android:src="@drawable/ic_chevron_right_green"
+                        />
+                </LinearLayout>
+
+            <View
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/grey"/>
+
+            <Button
+                android:layout_marginTop="250dp"
+                android:layout_width="102dp"
+                android:layout_height="23dp"
+
+                android:text="Continuar"
+                android:onClick="onClick"
+                android:background="@drawable/border_button"
+                android:textAllCaps="false"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/grey"
+                android:id="@+id/program_order"
+                android:stateListAnimator="@null"
+
+                android:textSize="11dp"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

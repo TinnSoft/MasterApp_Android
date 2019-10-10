@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+   <!-- <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_products"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Servicios"
+
+            />
+
+        <item
+            android:id="@+id/nav_history"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Historial" />
+        <item
+            android:id="@+id/nav_payment"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Pagos" />
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Perfil" />
+    </group>-->
+
+    <item android:title="Servicios"
+        >
+        <menu>
+            <item
+                android:id="@+id/nav_orders"
+                android:icon="@drawable/clock"
+                android:title="Mis Pedidos"
+
+                />
+
+            <!--<item
+                android:id="@+id/nav_messages"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="Mensajes"
+                />-->
+        </menu>
+    </item>
+
+    <item android:title="Mi cuenta">
+        <menu>
+
+            <item
+                android:id="@+id/nav_profile"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="Perfil" />
+
+            <!--<item
+                android:id="@+id/nav_card"
+                android:icon="@drawable/ic_credit_card_black_24dp"
+                android:title="Mis Tarjetas" />-->
+            <item
+                android:id="@+id/nav_session"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Cerrar Sesion" />
+        </menu>
+    </item>
+
+</menu>

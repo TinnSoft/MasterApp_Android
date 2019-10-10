@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.developer.pinedo.masterapp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_logo_master_verde"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppThemeHome">
+        <activity android:name=".Client.ChatActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.developer.pinedo.masterapp.Client.OrdersActivity" />
+        </activity>
+        <activity android:name=".LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".RegisterActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.developer.pinedo.masterapp.Client.MainActivity" />
+        </activity>
+        <activity android:name=".ProfileActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.developer.pinedo.masterapp.Client.MainActivity" />
+        </activity>
+        <activity android:name=".MenuChefActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.developer.pinedo.masterapp.ListChefActivity" />
+        </activity>
+        <activity android:name=".ServicesActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.developer.pinedo.masterapp.OverviewActivity" />
+        </activity>
+        <activity android:name=".PaymentInfoActivity" />
+        <activity android:name=".DetailMenuActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MenuChefActivity" />
+        </activity>
+        <activity android:name=".OverviewActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".DetailMenuActivity" />
+        </activity>
+        <activity android:name=".EndsplashActivity" />
+        <activity
+            android:name=".Client.MainActivity"
+            android:label="@string/title_activity_main"
+            android:theme="@style/AppThemeHome"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <activity android:name=".ReceiveActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.developer.pinedo.masterapp.Client.OrdersActivity" />
+        </activity>
+
+        <service android:name=".FCM.MessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="com.google.firebase.messaging.default_notification_channel_id"
+                android:value="@string/default_notification_channel_id" />
+        </service>
+
+        <activity android:name=".CardActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.developer.pinedo.masterapp.Client.MainActivity" />
+        </activity>
+        <activity android:name=".Client.OrdersActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.developer.pinedo.masterapp.Client.MainActivity" />
+        </activity>
+        <activity android:name=".DetailOrderActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.developer.pinedo.masterapp.Client.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Supplier.SupplierActivity"
+            android:label="@string/title_activity_supplier"
+            android:theme="@style/AppThemeHome" />
+        <activity android:name=".Supplier.ConvertToSupplierActivity" />
+        <activity android:name=".Supplier.ProductActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.developer.pinedo.masterapp.Supplier.SupplierActivity" />
+        </activity>
+        <activity android:name=".Supplier.OrderSupplierActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.developer.pinedo.masterapp.Supplier.SupplierActivity" />
+        </activity>
+        <activity android:name=".ListChefActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.developer.pinedo.masterapp.Client.MainActivity" />
+        </activity>
+        <activity android:name=".StudyActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.developer.pinedo.masterapp.Supplier.SupplierActivity" />
+        </activity>
+        <activity android:name=".ExperienceActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.developer.pinedo.masterapp.Supplier.SupplierActivity" />
+        </activity>
+        <activity android:name=".Supplier.SelectCategoryActivity" />
+        <activity
+            android:name=".Client.New_client.NewClientActivity"
+            android:label="@string/title_activity_new_client"
+            android:theme="@style/AppThemeHome" />
+        <activity android:name=".Supplier.New_supplier.NewSupplierActivity" />
+        <activity android:name=".InitActivity" />
+        <activity android:name=".Supplier.ReceiveSupplierActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.developer.pinedo.masterapp.Supplier.OrderSupplierActivity" />
+        </activity>
+        <activity android:name=".Client.PaymentSplashActivity" />
+    </application>
+
+</manifest>

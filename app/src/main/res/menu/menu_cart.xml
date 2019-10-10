@@ -1,0 +1,12 @@
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".DetailMenuActivity">
+    <item
+        android:id="@+id/action_seach"
+        android:icon="@drawable/ic_cart"
+        android:title="Test"
+        app:showAsAction="always"
+        />
+</menu>
